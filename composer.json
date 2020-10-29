@@ -1,0 +1,27 @@
+{
+    "name": "danmercc/repogenerator",
+    "description": "RepoGenerator",
+    "authors": [
+        {
+            "name": "Danmer Ccoscco",
+            "email": "danmerccoscco@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DanmerCC\\Repogenerator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DanmerCC\\Repogenerator\\Tests\\": "tests"
+        }
+    }
+}
