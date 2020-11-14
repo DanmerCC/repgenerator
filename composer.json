@@ -1,6 +1,7 @@
 {
     "name": "danmercc/repogenerator",
     "description": "RepoGenerator",
+    "license": "MIT",
     "authors": [
         {
             "name": "Danmer Ccoscco",
