@@ -48,14 +48,14 @@ class Generator extends Command
     }
 
     public function createRepository($modelName){
-        $remplacer = new Remplacer(base_path()."/packages/danmercc/repogenerator/src/Stubs/ModelRepositoryTemplate.stub");
+        $remplacer = new Remplacer(base_path()."/vendor/danmercc/repogenerator/src/Stubs/ModelRepositoryTemplate.stub");
         $remplacer->remplace('MODEL',$modelName);
         $result = $remplacer->save(base_path()."/app/Repositories/{$modelName}Repository.php");
         $this->output->writeln($result);
     }
 
     public function createApiController($modelName){
-        $remplacer = new Remplacer(base_path()."/packages/danmercc/repogenerator/src/StubsModelAPIControllerTemplate.stub");
+        $remplacer = new Remplacer(base_path()."/vendor/danmercc/repogenerator/src/Stubs/ModelAPIControllerTemplate.stub");
         $remplacer->remplace('MODEL',$modelName);
         $remplacer->remplace('MIN_MODEL',strtolower(substr($modelName,0,1)).substr($modelName,1,strlen($modelName)-1));
         $result = $remplacer->save(base_path()."/app/Http/Controllers/API/{$modelName}APIController.php");
